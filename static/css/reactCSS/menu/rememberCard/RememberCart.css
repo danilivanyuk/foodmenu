@@ -1,0 +1,139 @@
+.remember-cart{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.remember-cart-header{
+    display: flex;
+}
+
+
+.close-remember-cart {
+    position: absolute;
+    top: 17px;
+    right: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+.close-remember-cart:hover {
+    opacity: 1;
+}
+.close-remember-cart:before, .close-remember-cart:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close-remember-cart:before {
+    transform: rotate(45deg);
+}
+.close-remember-cart:after {
+    transform: rotate(-45deg);
+}
+
+.delete-dish:before, .delete-dish:after{
+    background: rgb(219, 37, 37);
+
+}
+
+.delete-dishes-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.remember-cart-header p{
+    color: #000;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+
+.remember-cart-object{
+    padding: 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.object-info{
+    width: 90%;
+}
+.delete-remembered-dish{
+    width: 10%;
+}
+.remember-cart-object p{
+    color: #000;
+    font-size: 18px;
+}
+
+.remember-cart-object-price{
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.remember-cart-icon{
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.remember-cart-icon:before{
+    border-radius: 100%;
+
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px) saturate(100%) contrast(45%) brightness(130%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%) contrast(45%) brightness(130%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.remember-cart-icon button{
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+
+
+
+  

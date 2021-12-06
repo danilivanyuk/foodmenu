@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/landingPage.css' %}">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div>
+        <p class="nav-title text-white">FoodMenu</p>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li class="nav-link"><a href="">{% trans "Преимущества" %}</a></li>
+          <li class="nav-link"><a href="">{% trans "Руководство" %}</a></li>
+          <li class="nav-link"><a href="">{% trans "Тарифы" %}</a></li>
+          {% if user.is_authenticated %}
+          <li class="nav-link"><a class="lk-btn" href="{% url 'frontend:profile-page' %}">{% trans "Профиль" %}</a></li>
+          {% else %}
+          <li class="nav-link"><a class="lk-btn" href="{% url 'login-page' %}">{% trans "Войти" %}</a></li>
+
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </header>
+  {% block content %}
+
+  {% endblock content %}
+  <footer>
+    <p class="title text-white">FoodMenu</p>
+    <div class="footer-inner">
+      <div class="shortlinks">
+        <ul>
+          <li><a href="">{% trans "Преимущества" %}</a></li>
+          <li><a href="">{% trans "Руководство" %}</a></li>
+          <li><a href="">{% trans "Тарифы" %}</a></li>
+          <li><a href="">{% trans "Политика безопасности" %}</a></li>
+          <li><a href="">{% trans "Публичная оферта" %}</a></li>
+        </ul>
+      </div>
+      <div class="socials">
+        <ul>
+          <li><img src="{% static 'images/gmailicon.png' %}" alt="menu instagram"><a href="">foodmenu@gmail.com</a></li>
+          <li><img src="{% static 'images/instaicon.png' %}" alt=""><a href="mail instagram">Insta</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

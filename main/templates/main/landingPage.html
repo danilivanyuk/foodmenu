@@ -1,0 +1,106 @@
+{% extends 'main/main.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+  <div class="intro">
+    <div class="intro-inner">
+      <div class="intro-text text-white">
+        <p>{% trans  "Онлайн меню для вашего заведения" %}</p>
+        <a href="">{% trans "Подробнее"%} </a>
+      </div>
+      <div class="intro-img">
+        <img src="{% static 'images/Menu example.png' %}" alt="menu example">
+      </div>
+    </div>
+    
+    <div class="cards">
+      <div class="card" id="first-card">
+        
+        <p class="card-title card-title-dark"><img src="{% static 'images/madeforyou.png' %}" alt="Everything was made for you" class="phone-card-img">{% trans "Все сделано за вас" %}</p>
+        <p class="card-description card-description-dark">{% trans "Не беспокойтесь о домене, ссылках, работоспособности сайта" %}</p>
+        <img src="{% static 'images/madeforyou.png' %}" alt="Everything was made for you" class="card-img">
+      </div>
+      <div class="card" id="second-card">
+        
+        <p class="card-title card-title-light">
+          <img src="{% static 'images/editable.png' %}" alt="Edit your menu" class="phone-card-img"> {% trans "Легко редактировать" %}</p>
+        <p class="card-description card-description-light">
+          {% trans "Вы можете редактировать меню с компьютера, телефона или планшета" %}
+        </p>
+        <img src="{% static 'images/editable.png' %}" alt="Edit your menu" class="card-img">
+      </div>
+      <div class="card" id="third-card">
+        <p class="card-title card-title-dark"> <img src="{% static 'images/remember.png' %}" alt="Remember your menu" class="phone-card-img">{% trans "Вас запомнят" %}</p>
+        <p class="card-description card-description-dark">{% trans "Меню в браузере клиента, значит оно останется после ухода" %}</p>
+        <img src="{% static 'images/remember.png' %}" alt="Remember your menu" class="card-img">
+      </div>
+      <div class="card" id="fourth-card">
+        <p class="card-title card-title-light"><img src="{% static 'images/qr.png' %}" alt="QR code for menu" class="phone-card-img">{% trans "QR Код" %}</p>
+        <p class="card-description card-description-light">{% trans "Распечатайте QR код для мгновенного доступа к меню" %}</p>
+        <img src="{% static 'images/qr.png' %}" alt="QR code for menu" class="card-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="advantages">
+    <p class="title">{% trans "Чем именно будет полезен FoodMenu для вашего бизнеса?" %}</p>
+    <div class="reasons">
+      <div class="reason">
+        <p class="reason-num">#1</p>
+        <p class="reason-title">{% trans "Быстрый доступ в меню" %}</p>
+        <p class="reason-description">{% trans "Ссылка или QR-код откроют ваше меню мгновенно" %}</p>
+      </div>
+      <div class="reason">
+        <p class="reason-num">#2</p>
+        <p class="reason-title">{% trans "Больший охват аудитории" %}</p>
+        <p class="reason-description">{% trans "хз" %}</p>
+      </div>
+      <div class="reason">
+        <p class="reason-num">#3</p>
+        <p class="reason-title">{% trans "Экономия времени" %}</p>
+        <p class="reason-description">{% trans "Вам не нужно будет перепечатывать меню после изменений" %}</p>
+      </div>
+      <div class="reason">
+        <p class="reason-num">#4</p>
+        <p class="reason-title">{% trans "Мульти меню" %}</p>
+        <p class="reason-description">{% trans "Создайте меню для всех своих заведений " %}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide">
+    <div class="guide-inner">
+      <p class="title">{% trans "Руководство по использованию" %}</p>
+      <div class="steps">
+        <div class="step">
+          <p class="step-title">{% trans "1 шаг" %}</p>
+          <p class="step-description">{% trans "Зарегистрируйтесь на сайте" %}</p>
+        </div>
+        <div class="step">
+          <p class="step-title">{% trans "2 шаг" %}</p>
+          <p class="step-description">{% trans "Перейдите в " %}<a style="color: #000; text-decoration: underline;" href="{% url 'frontend:profile-page' %}">{% trans "профиль" %}</a></p>
+        </div>
+        <div class="step">
+          <p class="step-title">{% trans "3 шаг" %}</p>
+          <p class="step-description">{% trans "Перейдите на вкладку 'меню'" %}</p>
+        </div>
+        <div class="step">
+          <p class="step-title">{% trans "4 шаг" %}</p>
+          <p class="step-description">{% trans "Нажмите на “Создать меню”, и заполните предложенные поля" %}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="subscription">
+    <p class="title">{% trans "Подписка" %}</p>
+    <p class="sub-description">{% trans "Чтобы полноценно использовать сервис FoodMenu необходимо оформить подписку. Первые 7 дней для ознакомления будут бесплатны" %}</p>
+    <p class="sub-price">{% trans "5000 тг/месяц" %}</p>
+    <a href="" class="sub-btn">{% trans "Подписаться" %}</a>
+  </div>
+
+
+{% endblock content %}
+

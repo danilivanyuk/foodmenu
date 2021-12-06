@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, h1, h2, h3{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+p, button, label{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #24305e;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.get-form-btn{
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+}
+
+
+
+.get-form-btn:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+@media only screen and (max-width: 768px) {
+    .get-form-btn{
+        padding: 14px 22px;
+        margin-bottom: 15px;
+    }
+}
+
+
+.button-edit{
+    /* position: absolute; */
+    /* right: 0; */
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 100%;
+    margin-left: 15px;
+}

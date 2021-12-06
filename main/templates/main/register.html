@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+    <div class="container">
+
+        <form class="form-horizontal ajax-post" role="form" method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">{% trans "Электронная почта" %}</label>
+              <div class="email-container">
+                <input name="email" type="email" class="form-control" id="Email" placeholder="Электронная почта">
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label for="password1" class="col-sm-2 control-label">{% trans "Пароль" %}</label>
+              <div class="password1-container">
+                <input name="password1" type="password" class="form-control" placeholder="Пароль">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password2" class="col-sm-2 control-label">{% trans "Подтвердитие пароль" %}</label>
+              <div class="password2-container">
+                <input name="password2" type="password" class="form-control"  placeholder="Пароль">
+              </div>
+            </div>
+    
+            
+            <div class="form-group">
+              <div>
+                <button type="button" class="btn btn-default btn-register-submit">{% trans "Зарегестрироваться" %}</button>
+              </div>
+            </div>
+            <div class="form-group register-problems">
+              <div>
+                <a id="link-to-login-page" href="{% url 'login-page' %}">{% trans "Уже есть аккаунт?" %}</a>
+              </div>
+            </div>
+            <a id="profile-page-link" href="{% url 'frontend:profile-page' %}"></a>
+        </form>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="{% static 'js/auth.js' %}"></script>
+
+</body>
+</html>

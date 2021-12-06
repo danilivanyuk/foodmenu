@@ -1,0 +1,76 @@
+.category-dish {
+    padding: 35px 75px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.dish-info-handler {
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-title {
+    font-size: 24px;
+}
+
+.dish-description {
+    color: rgba(228, 234, 237, 80%);
+    font-size: 18px;
+}
+
+.dish-price {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.category-dish{
+    position: relative;
+}
+
+.remember-dish-btn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.category-dish-info-upper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-dish-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-info-handler {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .category-dish {
+        padding: 20px 15px 0px;
+    }
+    .dish-description {
+        font-size: 16px;
+    }
+    .category-dish-info{
+        flex-direction: column;
+    }
+    .category-dish-info-upper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .category-dish-info-down{
+        margin-top: 2px;
+        width: 100%;
+    }
+    
+}

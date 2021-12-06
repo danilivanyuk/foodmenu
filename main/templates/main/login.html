@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+  <div class="container">
+
+    <form class="form-horizontal ajax-post" role="form" method="POST" action="{% url 'rest_login' %}">
+        {% csrf_token %}
+        
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">{% trans "Электронная почта" %}</label>
+          <div class="email-container">
+            <input name="email" type="email" class="form-control" id="Email" placeholder="Электронная почта">
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="password" class="col-sm-2 control-label">{% trans "Пароль" %}</label>
+          <div class="password-container">
+            <input name="password" type="password" class="form-control" id="Password" placeholder="Пароль">
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+          <div>
+            <button type="button" class="btn btn-default btn-login-submit">Войти</button>
+          </div>
+        </div>
+        <div class="form-group auth-problems">
+          <div>
+            <a href="{% url 'register-page' %}">{% trans "Зарегестрироваться" %}</a>
+          </div>
+          <div>
+            <a href="{% url 'password-reset-request' %}">{% trans "Забыли пароль?" %}</a>
+          </div>
+        </div>
+        
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="{% static 'js/auth.js' %}"></script>
+</body>
+</html>
+
+

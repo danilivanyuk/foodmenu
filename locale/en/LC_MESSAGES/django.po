@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-27 16:45+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\foodmenu\settings.py:144
+msgid "English"
+msgstr ""
+
+#: .\foodmenu\settings.py:145
+msgid "Russian"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:9
+msgid "Онлайн меню для вашего заведения"
+msgstr "Online menu for your cafe"
+
+#: .\main\templates\main\landingPage.html:10
+msgid "Подробнее"
+msgstr "More inforamtion"
+
+#: .\main\templates\main\landingPage.html:20
+msgid "Все сделано за вас"
+msgstr "Everything is handled for you."
+
+#: .\main\templates\main\landingPage.html:21
+msgid "Не беспокойтесь о домене, ссылках, работоспособности сайта"
+msgstr "Don't worry about domains, links, website workability."
+
+#: .\main\templates\main\landingPage.html:26
+msgid "Легко редактировать"
+msgstr "Easy to edit"
+
+#: .\main\templates\main\landingPage.html:32
+msgid "Вас запомнят"
+msgstr "You will be remembered"
+
+#: .\main\templates\main\landingPage.html:33
+msgid "Меню в браузере клиента, значит оно останется после ухода"
+msgstr "Menu in the browser will remain after the client leaves"
+
+#: .\main\templates\main\landingPage.html:37
+msgid "QR Код"
+msgstr "QR Code"
+
+#: .\main\templates\main\landingPage.html:38
+msgid "Распечатайте QR код для мгновенного доступа к меню"
+msgstr "Print QR Code for instant access to the menu."
+
+#: .\main\templates\main\landingPage.html:45
+msgid "Чем именно будет полезен FoodMenu для вашего бизнеса?"
+msgstr "What are the benefits of using FoodMenu for your business"
+
+#: .\main\templates\main\landingPage.html:49
+msgid "Быстрый доступ в меню"
+msgstr "Quick access to menu"
+
+#: .\main\templates\main\landingPage.html:50
+msgid "Ссылка или QR-код откроют ваше меню мгновенно"
+msgstr "Link and QR-Code will instantly open your menu."
+
+#: .\main\templates\main\landingPage.html:54
+msgid "Больший охват аудитории"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:55
+msgid "хз"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:59
+msgid "Экономия"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:60
+msgid "Вам не нужно будет перепечатывать меню после изменений"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:64
+msgid "Четвертая причина"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:65
+msgid "Описание первой причины"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:72
+msgid "Руководство по использованию"
+msgstr "Guide"
+
+#: .\main\templates\main\landingPage.html:75
+msgid "1 шаг"
+msgstr "1 step"
+
+#: .\main\templates\main\landingPage.html:76
+msgid "Зарегистрируйтесь на сайте"
+msgstr "Register"
+
+#: .\main\templates\main\landingPage.html:79
+msgid "2 шаг"
+msgstr "2 step"
+
+#: .\main\templates\main\landingPage.html:80
+msgid "Перейдите в "
+msgstr "Go to"
+
+#: .\main\templates\main\landingPage.html:80
+msgid "профиль"
+msgstr "profile"
+
+#: .\main\templates\main\landingPage.html:83
+msgid "3 шаг"
+msgstr "3 step"
+
+#: .\main\templates\main\landingPage.html:84
+msgid "Перейдите на вкладку 'меню'"
+msgstr "Go to 'menu' tab"
+
+#: .\main\templates\main\landingPage.html:87
+msgid "4 шаг"
+msgstr "4 step"
+
+#: .\main\templates\main\landingPage.html:88
+msgid "Нажмите на “Создать меню”, и заполните предложенные поля"
+msgstr "Click on 'Create menu' and fill in the fields."
+
+#: .\main\templates\main\landingPage.html:96
+msgid "Подписка"
+msgstr "Subscription"
+
+#: .\main\templates\main\landingPage.html:99
+msgid "3500 тг/месяц"
+msgstr ""
+
+#: .\main\templates\main\landingPage.html:100
+msgid "Подписаться"
+msgstr "Subscribe"
+
+#: .\main\templates\main\login.html:21 .\main\templates\main\register.html:20
+#: .\main\templates\main\resetPassword.html:21
+msgid "Электронная почта"
+msgstr "Email"
+
+#: .\main\templates\main\login.html:28
+#: .\main\templates\main\passwordResetConfirm.html:31
+#: .\main\templates\main\register.html:27
+msgid "Пароль"
+msgstr "password"
+
+#: .\main\templates\main\login.html:42
+#: .\main\templates\main\passwordResetConfirm.html:51
+#: .\main\templates\main\register.html:43
+#: .\main\templates\main\resetPassword.html:34
+#, fuzzy
+#| msgid "Зарегистрируйтесь на сайте"
+msgid "Зарегестрироваться"
+msgstr "Register"
+
+#: .\main\templates\main\login.html:45
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: .\main\templates\main\main.html:24 .\main\templates\main\main.html:45
+msgid "Преимущества"
+msgstr "Advantages"
+
+#: .\main\templates\main\main.html:25 .\main\templates\main\main.html:46
+msgid "Руководство"
+msgstr "Guide"
+
+#: .\main\templates\main\main.html:26 .\main\templates\main\main.html:47
+msgid "Тарифы"
+msgstr "Pricing"
+
+#: .\main\templates\main\main.html:28
+msgid "Профиль"
+msgstr "Profile"
+
+#: .\main\templates\main\main.html:30
+#: .\main\templates\main\passwordResetConfirm.html:54
+#: .\main\templates\main\resetPassword.html:37
+msgid "Войти"
+msgstr "Login"
+
+#: .\main\templates\main\main.html:48
+msgid "Политика безопасности"
+msgstr "Security policy"
+
+#: .\main\templates\main\main.html:49
+msgid "Публичная оферта"
+msgstr "Public offer"
+
+#: .\main\templates\main\passwordResetConfirm.html:37
+msgid "Повторите пароль"
+msgstr ""
+
+#: .\main\templates\main\passwordResetConfirm.html:46
+msgid "Подтвердить"
+msgstr ""
+
+#: .\main\templates\main\register.html:34
+msgid "Подтвердитие пароль"
+msgstr ""
+
+#: .\main\templates\main\register.html:48
+msgid "Уже есть аккаунт?"
+msgstr ""
+
+#: .\main\templates\main\resetPassword.html:29
+msgid "Отправить письмо"
+msgstr ""

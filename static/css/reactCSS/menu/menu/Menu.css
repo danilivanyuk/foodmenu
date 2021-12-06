@@ -1,0 +1,165 @@
+.container {
+  margin: 0 auto;
+}
+
+a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.menu-header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .menu-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: fit;
+} */
+
+.menu-header-section {
+}
+
+.menu-header-upper {
+  text-align: center;
+}
+.menu-instagram {
+  display: flex;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-page-link {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.QRCode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.QRCode-container input {
+  margin-top: 10px;
+  /* max-width: 100px; */
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.menu-instagram svg {
+  margin-right: 10px;
+}
+.menu-logo-container {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto 25px;
+}
+
+p,
+h1,
+h2,
+h3,
+a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-logo {
+  /* display: inline; */
+  /* margin: 0 auto; */
+  /* margin-left: -10%; */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-size: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.menu-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu-info p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+}
+
+.menu-title {
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  /* align-self: baseline; */
+}
+
+.menu-address {
+  text-align: left;
+}
+
+.menu-phone {
+  text-align: right;
+}
+
+.menu-section {
+  margin-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.button-edit {
+  /* position: absolute; */
+  /* right: 0; */
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 100%;
+  margin-left: 15px;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.menu-new-logo-container {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 65px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-info p {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}
