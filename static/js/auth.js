@@ -1,3 +1,5 @@
+import { SITE_LINK } from "./defaultVars";
+
 if (document.querySelector(".btn-login-submit")) {
   document.querySelector(".btn-login-submit").addEventListener("click", login);
 } else if (document.querySelector(".btn-register-submit")) {
@@ -85,7 +87,7 @@ function deleteAllErrorMessages() {
 }
 
 function login() {
-  let url = `http://127.0.0.1:8000/auth/login/`;
+  let url = `${SITE_LINK}/auth/login/`;
   let form = document.querySelector(".form-horizontal");
   // var form = document.forms[0];
 
