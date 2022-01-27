@@ -174,7 +174,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://localhost:3001",
     "http://127.0.0.1", 
-    "foodmenu-demo.herokuapp.com"
+    "https://foodmenu-demo.herokuapp.com"
 ]
 
 SITE_ID = 1
