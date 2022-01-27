@@ -226,3 +226,4 @@ ACCOUNT_USERNAME_REQUIRED = False
 
 
 LOGIN_URL = 'http://localhost:8000/login'
+django_heroku.settings(locals())
