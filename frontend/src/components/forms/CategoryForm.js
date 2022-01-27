@@ -104,7 +104,7 @@ export default function CategoryForm(props) {
               props.changeEditState();
               let a = setTimeout(() => {
                 props.getFetchedCategories(props.category.menu);
-              }, 10);
+              }, 200);
             }}
           >
             Удалить
