@@ -1,1 +1,1 @@
-export const SITE_LINK = "https://foodmenu-demo.herokuapp.com/auth/login/";
+export const SITE_LINK = "https://foodmenu-demo.herokuapp.com";
