@@ -103,7 +103,7 @@ function login() {
       .post(url, data, { headers })
       .then((resp) => {
         if (resp.status === 200) {
-          window.location.assign("http://127.0.0.1:8000/profile");
+          window.location.assign(`${SITE_LINK}/profile`);
         }
       })
       .catch((e) => {
@@ -115,7 +115,7 @@ function login() {
 function register() {
   deleteAllErrorMessages();
   let form = document.querySelector(".form-horizontal");
-  let url = `http://127.0.0.1:8000/registration/`;
+  let url = `${SITE_LINK}/registration/`;
   const headers = {
     "Content-type": "application/json",
   };
@@ -145,7 +145,7 @@ function register() {
 }
 
 function passwordResetRequest() {
-  let url = `http://127.0.0.1:8000/auth/password/reset/`;
+  let url = `${SITE_LINK}/auth/password/reset/`;
   let form = document.querySelector(".form-horizontal");
   let data = {
     email: form.querySelector('input[name="email"]').value,
@@ -171,7 +171,7 @@ function passwordResetRequest() {
 function passwordResetConfirm() {
   deleteAllErrorMessages();
 
-  let url = `http://127.0.0.1:8000/auth/password/reset/confirm/`;
+  let url = `${SITE_LINK}/auth/password/reset/confirm/`;
   let form = document.querySelector(".form-horizontal");
   var url_elements = window.location.pathname.split("/");
   let uid;

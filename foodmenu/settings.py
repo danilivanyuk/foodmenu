@@ -225,6 +225,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 # ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 # The ACCOUNT_CONFIRM_EMAIL_ON_GET is to allow the website to verify the user when the user opens the link received in the email. Then, we want the user to be redirected to the LOGIN_URL after verification, so we specified our LOGIN_URL
 
-
-LOGIN_URL = 'http://localhost:8000/login'
+SITE_LINK = 'https://foodmenu-demo.herokuapp.com/'
+# LOGIN_URL = 'http://localhost:8000/login'
+LOGIN_URL = SITE_LINK
 django_heroku.settings(locals())
