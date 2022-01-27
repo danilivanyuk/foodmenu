@@ -202,7 +202,7 @@ REST_FRAMEWORK = {
 # SESSION_COOKIE_AGE = 60*60*24
 # AUTH
 AUTHENTICATION_BACKENDS = [
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 AUTH_USER_MODEL = 'customers.Customer'
