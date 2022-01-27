@@ -48,14 +48,17 @@ export default function Menu(props) {
   };
 
   let ROOT_URL = "/menu/";
-
+  let SITE_URL = "https://foodmenu-demo.herokuapp.com/";
   return (
     <section
       className="menu-header-section"
       style={{ background: menu.theme === "Black-White" ? "#141618" : "" }}
     >
       <div className="QRCode-container">
-        <a className="customer-page-link" href={`${ROOT_URL + menu.slug}`}>
+        <a
+          className="customer-page-link"
+          href={`${SITE_URL + ROOT_URL + menu.slug}`}
+        >
           Перейти на страницу пользователя
         </a>
 
