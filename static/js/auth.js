@@ -1,4 +1,4 @@
-import { SITE_LINK } from "./defaultVars";
+import { SITE_LINK } from "./defaultVars.js";
 
 if (document.querySelector(".btn-login-submit")) {
   document.querySelector(".btn-login-submit").addEventListener("click", login);
