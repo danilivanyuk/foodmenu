@@ -48,7 +48,7 @@ export default function Menu(props) {
   };
 
   let ROOT_URL = "/menu/";
-  let SITE_URL = "https://foodmenu-demo.herokuapp.com";
+  let SITE_URL = "foodmenu-demo.herokuapp.com";
   return (
     <section
       className="menu-header-section"
