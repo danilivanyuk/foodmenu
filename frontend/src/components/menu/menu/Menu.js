@@ -55,14 +55,11 @@ export default function Menu(props) {
       style={{ background: menu.theme === "Black-White" ? "#141618" : "" }}
     >
       <div className="QRCode-container">
-        <a
-          className="customer-page-link"
-          href={`${SITE_URL + ROOT_URL + menu.slug}`}
-        >
+        <a className="customer-page-link" href={`${ROOT_URL + menu.slug}`}>
           Перейти на страницу пользователя
         </a>
 
-        <QRCode id="QRCode" value={`${ROOT_URL + menu.slug}`} />
+        <QRCode id="QRCode" value={`${SITE_URL + ROOT_URL + menu.slug}`} />
         <input
           type="button"
           value="Скачать QR-Код"
