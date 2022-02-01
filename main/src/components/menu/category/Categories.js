@@ -37,6 +37,7 @@ export default function Categories({ menu_id }) {
         <div>
           <div className="category-select">
             <Select
+              isSearchable={false}
               options={options}
               defaultValue={options[0]}
               onChange={(e) => {

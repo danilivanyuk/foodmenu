@@ -41,6 +41,8 @@
     margin-bottom: 5px;
 }
 
+.change-password
+
 .disclamer{
     color: rgba(255, 255, 255, .5);
     
@@ -68,6 +70,11 @@
 
 .change-password{
     margin-top: 20px;
+}
+
+.password-change{
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 768px) {

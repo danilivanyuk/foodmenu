@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-body{
-    background: #24305e;
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body{
+    background: #24305e;
+    
+}
+
+
 
 a{
     font-family: 'Roboto', sans-serif;
@@ -15,12 +22,32 @@ a{
     text-decoration: none;
 }
 
+
+header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header p{
+    /* width: 20px; */
+}
+
 .container{
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #fff;
 }
 
 .form-horizontal{
