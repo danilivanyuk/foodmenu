@@ -53,13 +53,22 @@ a {
 /* HEADER */
 
 nav {
+  width: 100%;
   position: relative;
-
+  
   background: var(--bg_color_1);
   padding: 55px 90px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.nav-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  justify-content: space-between;
 }
 
 .nav-title {
@@ -69,13 +78,15 @@ nav {
 }
 
 .nav-links {
-  width: 40%;
+  width: 50%;
   display: flex;
+  justify-content: space-between;
 }
 .nav-link {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
+  cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 
@@ -98,26 +109,55 @@ nav {
 @media only screen and (max-width: 1280px) {
   .nav-link {
     font-size: 18px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  nav {
-    padding: 35px 40px 20px;
+  nav{
+    padding: 55px 20px 20px;
+  }
+  .nav-container{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-links{
+    justify-content: space-between;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  nav{
+    padding: 55px 20px 20px;
+  }
+  .nav-container{
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-links{
+    width: auto;
+    
+  }
   .nav-link {
     font-size: 14px;
     padding-left: 20px;
   }
+ 
 }
 
 @media only screen and (max-width: 480px) {
   nav {
-    padding: 35px 10px 20px;
+    max-width: 480px;
+    /* justify-content: center; */
+    padding: 35px 0px 20px;
+  }
+  .nav-container{
+    max-width: 480px;
+    padding: 0 10px 0;
+    justify-content:space-between;
+  }
+  .nav-title{
+    font-size: 48px;
   }
   .nav-link {
     display: none;
@@ -215,8 +255,11 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
+  /* .intro{
+    max-width: 480px;
+  }
   .intro-inner {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
   }
   .intro-text {
     font-size: 32px;
@@ -224,6 +267,10 @@ nav {
   }
   .intro-img img {
     width: 100%;
+  } */
+
+  .intro-text {
+    font-size: 40px;
   }
 }
 
@@ -334,13 +381,16 @@ nav {
 @media only screen and (max-width: 768px) {
   .cards {
     margin: 0 10px;
-    display: grid;
-    width: 98%;
+    display: grid; 
     grid-template-columns: 374px 374px;
     grid-template-rows: 265px 265px;
+    /* width: 96%; */
+    
     bottom: -55%;
   }
   .card {
+    /* margin: 0 10px; */
+
     width: 374px;
     height: 265px;
   }
@@ -351,6 +401,8 @@ nav {
     font-size: 18px;
   }
   #first-card {
+    /* margin: 0 10px; */
+
     border-bottom-left-radius: 0px;
     border-top-left-radius: 10px;
   }
@@ -378,7 +430,7 @@ nav {
     align-items: center;
     justify-items: center;
     margin: 0 auto;
-    bottom: -60%;
+    bottom: -70%;
   }
   .card {
     width: 440px;
@@ -421,7 +473,7 @@ nav {
 @media only screen and (max-width: 360px) {
   .cards {
     grid-template-columns: 320px;
-    bottom: -70%;
+    bottom: -92%;
   }
   .card {
     width: 320px;

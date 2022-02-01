@@ -16,21 +16,21 @@
 <body>
   <header>
     <nav>
-      <div>
-        <p class="nav-title text-white">FoodMenu</p>
-      </div>
-      <div>
-        <ul class="nav-links">
-          <li class="nav-link"><a href="">{% trans "Преимущества" %}</a></li>
-          <li class="nav-link"><a href="">{% trans "Руководство" %}</a></li>
-          <li class="nav-link"><a href="">{% trans "Тарифы" %}</a></li>
-          {% if user.is_authenticated %}
-          <li class="nav-link"><a class="lk-btn" href="{% url 'frontend:profile-page' %}">{% trans "Профиль" %}</a></li>
-          {% else %}
-          <li class="nav-link"><a class="lk-btn" href="{% url 'login-page' %}">{% trans "Войти" %}</a></li>
+      <div class="nav-container">
+  
+          <p class="nav-title text-white">FoodMenu</p>
+        
+          <ul class="nav-links">
+            <li class="nav-link"><a href="">{% trans "Преимущества" %}</a></li>
+            <li class="nav-link"><a href="">{% trans "Руководство" %}</a></li>
+            <li class="nav-link"><a href="">{% trans "Тарифы" %}</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-link"><a class="lk-btn" href="{% url 'frontend:profile-page' %}">{% trans "Профиль" %}</a></li>
+            {% else %}
+            <li class="nav-link"><a class="lk-btn" href="{% url 'login-page' %}">{% trans "Войти" %}</a></li>
 
-          {% endif %}
-        </ul>
+            {% endif %}
+          </ul>
       </div>
     </nav>
   </header>
