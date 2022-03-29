@@ -61,7 +61,9 @@ export const deleteCustomer = () => {
     "Content-type": "application/json",
     "X-CSRFToken": csrftoken,
   };
-  axios.delete(url, { headers });
+  axios.delete(url, { headers }).then(() => {
+    window.location = "/login";
+  });
 };
 
 export const resendEmailConfirmation = (props) => {

@@ -1,8 +1,10 @@
-import { SITE_LINK } from "./defaultVars.js";
-
+// import { SITE_LINK } from "./defaultVars.js";
+// SITE_LINK = "https://foodmenu-demo.herokuapp.com";
+let SITE_LINK = ``;
 if (document.querySelector(".btn-login-submit")) {
   document.querySelector(".btn-login-submit").addEventListener("click", login);
 } else if (document.querySelector(".btn-register-submit")) {
+  console.log("KLJDHGFLKDJSG");
   document
     .querySelector(".btn-register-submit")
     .addEventListener("click", register);
@@ -115,6 +117,7 @@ function login() {
 function register() {
   deleteAllErrorMessages();
   let form = document.querySelector(".form-horizontal");
+  console.log("reg rabotaet");
   let url = `${SITE_LINK}/registration/`;
   const headers = {
     "Content-type": "application/json",

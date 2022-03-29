@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>FoodMenu</title>
   <link rel="stylesheet" href="{% static 'css/landingPage.css' %}">
 
 </head>
@@ -21,9 +21,9 @@
           <p class="nav-title text-white">FoodMenu</p>
         
           <ul class="nav-links">
-            <li class="nav-link"><a href="">{% trans "Преимущества" %}</a></li>
-            <li class="nav-link"><a href="">{% trans "Руководство" %}</a></li>
-            <li class="nav-link"><a href="">{% trans "Тарифы" %}</a></li>
+            <li class="nav-link"><a href="#first-card">{% trans "Преимущества" %}</a></li>
+            <li class="nav-link"><a href="#guide">{% trans "Руководство" %}</a></li>
+            <li class="nav-link"><a href="#subscription">{% trans "Тарифы" %}</a></li>
             {% if user.is_authenticated %}
             <li class="nav-link"><a class="lk-btn" href="{% url 'frontend:profile-page' %}">{% trans "Профиль" %}</a></li>
             {% else %}
@@ -42,9 +42,9 @@
     <div class="footer-inner">
       <div class="shortlinks">
         <ul>
-          <li><a href="">{% trans "Преимущества" %}</a></li>
-          <li><a href="">{% trans "Руководство" %}</a></li>
-          <li><a href="">{% trans "Тарифы" %}</a></li>
+          <li><a href="#first-card">{% trans "Преимущества" %}</a></li>
+          <li><a href="#guide">{% trans "Руководство" %}</a></li>
+          <li><a href="#subscription">{% trans "Тарифы" %}</a></li>
           <li><a href="">{% trans "Политика безопасности" %}</a></li>
           <li><a href="">{% trans "Публичная оферта" %}</a></li>
         </ul>

@@ -36,7 +36,7 @@ export default function Profile() {
         <div className="account-settings-container profile-container-object">
           <p className="profile-container-header">Настройка профиля</p>
           <div className="delete-account">
-            <p className="profile-settings-header">Удаление аккаунта</p>
+            <p className="profile-settings-header">WHY</p>
             <p className="disclamer">
               Удаление аккаунта приведет к удалению меню, а также вы потеряете
               подписку ну и еще какой нибудь предупрежающий текст
@@ -44,8 +44,8 @@ export default function Profile() {
             <button
               className="profile-btn"
               onClick={() => {
+                console.log("asd");
                 // deleteCustomer();
-                console.log("comments");
               }}
             >
               Удалить аккаунт

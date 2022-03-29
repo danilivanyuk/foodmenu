@@ -37,7 +37,7 @@ THEME_OPTIONS = [
 
 class Menu(models.Model):
     customer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)
-    logo = models.ImageField(blank=True, null=True, default="",
+    logo = models.ImageField(blank=True, null=True, default="menu_logos/defaultCafeIcon.jpg",
                              verbose_name="Логотип заведения", upload_to='menu_logos/')
     title = models.CharField(verbose_name="Название", max_length=100)
     address = models.CharField(

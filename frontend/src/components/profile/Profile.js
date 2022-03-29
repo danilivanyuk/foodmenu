@@ -90,8 +90,8 @@ export default function Profile() {
             <button
               className="profile-btn"
               onClick={() => {
-                // deleteCustomer();
-                // console.log("comments");
+                deleteCustomer();
+                console.log("comments");
               }}
             >
               Удалить аккаунт
