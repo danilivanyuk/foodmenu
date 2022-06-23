@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useFormik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
+
 import { createMenu, editMenu, deleteMenu } from "../../actions/menus";
 import "../../../../static/css/reactCSS/forms/Forms.css";
 
@@ -15,7 +17,7 @@ export default function MenuForm(props) {
   const [logoTitle, setLogoTitle] = useState("Логотип");
 
   const [menuTheme, setMenuTheme] = useState(editType ? props.menu.theme : "");
-
+  const { t } = useTranslation();
   const SUPPORTED_FORMATS = [
     "image/jpg",
     "image/jpeg",
@@ -45,14 +47,14 @@ export default function MenuForm(props) {
     },
     validationSchema: Yup.object({
       menuTitle: Yup.string()
-        .min(2, fieldNotLongEnough)
-        .max(60, fieldTooLong)
-        .required(requiredField),
+        .min(2, t("field_not_long_enough", { minCharsAmount: 2 }))
+        .max(60, t("chars_amount_restriction", { maxCharsAmount: 60 }))
+        .required(t("required_field")),
       menuAddress: Yup.string()
-        .min(2, fieldNotLongEnough)
-        .max(60, fieldTooLong)
-        .required(requiredField),
-      menuPhone: Yup.number(30, justNumbers),
+        .min(2, t("field_not_long_enough", { minCharsAmount: 2 }))
+        .max(60, t("chars_amount_restriction", { maxCharsAmount: 60 }))
+        .required(t("required_field")),
+      menuPhone: Yup.number(30, t("just_numbers")),
       menuLogo: Yup.mixed()
         .notRequired()
         .when("menuLogoState", {
@@ -60,12 +62,12 @@ export default function MenuForm(props) {
           then: Yup.mixed()
             .test(
               "fileSize",
-              fileTooHeavy,
+              t("file_too_heavy"),
               (value) => value && value.size <= FILE_SIZE
             )
             .test(
               "fileFormat",
-              unsupportedFormat,
+              t("unsupported_file_format"),
               (value) => value && SUPPORTED_FORMATS.includes(value.type)
             ),
         }),
@@ -114,7 +116,7 @@ export default function MenuForm(props) {
           name="menuInst"
           className="menu-inst"
           onChange={formik.handleChange}
-          placeholder="Инстаграм"
+          placeholder={t("inst_placeholder")}
           style={{ marginBottom: "20px" }}
         />
         {formik.errors.menuInst && formik.touched.menuInst && (
@@ -126,14 +128,14 @@ export default function MenuForm(props) {
           }}
           value={menuTheme}
         >
-          <option value="default">Стандартная тема</option>
-          <option value="Black-White">Черно-Белая тема</option>
+          <option value="default">{t("default_theme")}</option>
+          <option value="Black-White">{t("black_white_theme")}</option>
         </select>
       </div>
       <div className="menu-info">
         <div>
           <input
-            placeholder="Адрес"
+            placeholder={t("address_placeholder")}
             className="menu-address"
             name="menuAddress"
             type="text"
@@ -146,7 +148,7 @@ export default function MenuForm(props) {
         </div>
         <div>
           <input
-            placeholder="Название"
+            placeholder={t("title_placeholder")}
             name="menuTitle"
             type="text"
             onChange={formik.handleChange}
@@ -160,7 +162,7 @@ export default function MenuForm(props) {
           <input
             name="menuPhone"
             type="text"
-            placeholder="Телефон"
+            placeholder={t("phone_placeholder")}
             onChange={formik.handleChange}
             value={formik.values.menuPhone}
           />
@@ -178,7 +180,7 @@ export default function MenuForm(props) {
             formik.handleSubmit();
           }}
         >
-          {editType ? "Изменить" : "Создать"}
+          {editType ? t("form_edit") : t("form_add")}
         </button>
         <button
           className="form-btn form-cancel-btn"
@@ -186,7 +188,7 @@ export default function MenuForm(props) {
             editType ? props.changeEditState() : props.changeCreateState();
           }}
         >
-          Отменить
+          {t("form_cancel")}
         </button>
         {editType ? (
           <button
@@ -199,7 +201,7 @@ export default function MenuForm(props) {
               }, 100);
             }}
           >
-            Удалить
+            {t("form_delete")}
           </button>
         ) : (
           ""

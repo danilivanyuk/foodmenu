@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 // import { Categories } from "./category/Categories";
 import Categories from "../category/Categories";
 import { getMenu, createCategory } from "../../../actions/menus";
@@ -20,7 +22,7 @@ export default function Menu(props) {
       setMenu(data);
     });
   }
-
+  const { t } = useTranslation();
   function changeEditState() {
     if (editState) {
       setEditState(false);
@@ -56,13 +58,13 @@ export default function Menu(props) {
     >
       <div className="QRCode-container">
         <a className="customer-page-link" href={`${ROOT_URL + menu.slug}`}>
-          Перейти на страницу пользователя
+          {t("redirect_to_customer_page")}
         </a>
 
         <QRCode id="QRCode" value={`${SITE_URL + ROOT_URL + menu.slug}`} />
         <input
           type="button"
-          value="Скачать QR-Код"
+          value={t("download_qrCode")}
           onClick={() => {
             onImageDownload();
           }}

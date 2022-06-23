@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import { getCustomer, deleteCustomer } from "../../actions/profile";
 import ChangePasswordForm from "../forms/ChangePasswordForm";
 import { resendEmailConfirmation } from "../../actions/profile";
@@ -7,7 +9,7 @@ import "../../../../static/css/reactCSS/profile/Profile.css";
 export default function Profile() {
   const [customerInfo, setCustomerInfo] = useState("");
   const [loading, setLoading] = useState(true);
-  const [subscriptionRU, setSubscriptionRU] = useState("");
+  const [subscription, setSubscription] = useState("");
   const [passwordState, setPasswordState] = useState(false);
   useEffect(() => {
     getFetchedCustomer();
@@ -24,50 +26,54 @@ export default function Profile() {
   function getFetchedCustomer() {
     let fetchedCustomer = getCustomer();
     fetchedCustomer.then((data) => {
-      setSubscriptionRU(data.subscription === "Casual" ? "Обычная" : "Нет");
+      console.log(data.subscription);
+      setSubscription(
+        data.subscription === "Casual" ? t("casual_subscription") : t("none")
+      );
       setCustomerInfo(data);
       setLoading(false);
     });
   }
-  console.log(customerInfo);
+  const { t } = useTranslation();
+
   return (
     <div className="profile-container">
       <p className="profile-header">{customerInfo.email}</p>
       <div className="profile-main-inner-container">
         <div className="subscription-container profile-container-object">
-          <p className="profile-container-header">Подписка</p>
-          {subscriptionRU === "Нет" ? (
+          <p className="profile-container-header">{t("subsctiption_title")}</p>
+          {subscription === "Нет" ? (
             <div>
-              <p>У вас нет подписки</p>
-              <button className="profile-btn">Подключить</button>
+              <p>{t("dont_have_subscription")}</p>
+              <button className="profile-btn">{t("subscribe")}</button>
             </div>
           ) : (
             <div>
-              <p>У вас {subscriptionRU} подписка</p>
-              <button className="profile-btn">Отключить</button>
+              <p>{t("you_got_that_subscription", { subscription })}</p>
+              {/* <button className="profile-btn">{t("unsubscribe")}</button> */}
             </div>
           )}
         </div>
         <div className="account-settings-container profile-container-object">
           {customerInfo.is_email_confirmed === false ? (
             <div className="submit-email">
-              <p className="profile-settings-header">Подтвердить почту</p>
+              <p className="profile-settings-header">{t("confirm_email")}</p>
               <button
                 className="profile-btn"
                 onClick={() => {
                   resendEmailConfirmation(customerInfo.email);
                 }}
               >
-                Отправить письмо
+                {t("confirm_esend_confirm_codemail")}
               </button>
             </div>
           ) : (
             ""
           )}
 
-          <p className="profile-container-header">Настройка профиля</p>
+          <p className="profile-container-header">{t("profile_settings")}</p>
           <div className="change-password">
-            <p className="profile-settings-header">Изменить пароль</p>
+            <p className="profile-settings-header">{t("change_password")}</p>
             {passwordState ? (
               <ChangePasswordForm changePasswordState={changePasswordState} />
             ) : (
@@ -77,16 +83,15 @@ export default function Profile() {
                   changePasswordState();
                 }}
               >
-                Изменить пароль
+                {t("change_password")}
               </button>
             )}
           </div>
           <div className="delete-account">
-            <p className="profile-settings-header">Удаление аккаунта</p>
-            <p className="disclamer">
-              Удаление аккаунта приведет к удалению меню, а также вы потеряете
-              подписку ну и еще какой нибудь предупрежающий текст
+            <p className="profile-settings-header">
+              {t("delete_account_title")}
             </p>
+            <p className="disclaimer">{t("disclaimer")}</p>
             <button
               className="profile-btn"
               onClick={() => {
@@ -94,7 +99,7 @@ export default function Profile() {
                 console.log("comments");
               }}
             >
-              Удалить аккаунт
+              {t("delete_account")}
             </button>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import { useTranslation } from "react-i18next";
+
 import { getMenus } from "../../../actions/menus";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -10,7 +12,7 @@ export default function Menus() {
   const [menus, setMenus] = useState([]);
   const [token, setToken] = useState([]);
   const [createState, setCreateState] = useState(false);
-  const maxMenu = 3;
+  const maxAmount = 3;
   useEffect(() => {
     getFetchedMenus();
   }, []);
@@ -20,6 +22,7 @@ export default function Menus() {
       setMenus(data);
     });
   }
+  const { t } = useTranslation();
   function changeCreateState() {
     if (createState) {
       setCreateState(false);
@@ -29,7 +32,7 @@ export default function Menus() {
   }
   // const { url, path } = useRouteMatch();
   if (typeof menus === "undefined") {
-    return <p>Меню загружаются</p>;
+    return <p>{t("loading")}</p>;
   } else
     return (
       <section className="menus-section">
@@ -51,7 +54,7 @@ export default function Menus() {
                 </Link>
               </Fragment>
             ))}
-            {menus.length < maxMenu ? (
+            {menus.length < maxAmount ? (
               createState ? (
                 <MenuForm
                   type={"create"}
@@ -67,7 +70,7 @@ export default function Menus() {
                         changeCreateState();
                       }}
                     >
-                      Создать меню
+                      {t("create_menu")}
                     </button>
                   </div>
                 </div>
@@ -83,7 +86,7 @@ export default function Menus() {
             ) : (
               <a className="menu-select">
                 <div className="menu-select-info">
-                  <p>Вы можете создать только {maxMenu} меню</p>
+                  <p>{t("amount_restriction", { maxAmount })}</p>
                 </div>
               </a>
             )}

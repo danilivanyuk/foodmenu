@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 // import "./Forms.css";
 import "../../../../static/css/reactCSS/forms/Forms.css";
 import {
@@ -20,6 +22,8 @@ export default function CategoryForm(props) {
   const [categoryTitle, setCategoryTitle] = useState(
     editType ? props.title : ""
   );
+
+  const { t } = useTranslation();
 
   function editCategorySubmit() {
     editCategory(props.category.id, formik.values, props.category.menu);
@@ -45,7 +49,10 @@ export default function CategoryForm(props) {
       type: editType ? "edit" : "create",
     },
     validationSchema: Yup.object({
-      categoryTitle: Yup.string().max(30, "Не больше 30 символов"),
+      categoryTitle: Yup.string().max(
+        30,
+        t("chars_amount_restriction", { maxCharsAmount: 30 })
+      ),
     }),
     onSubmit: (values) => {
       if (values.type === "edit") {
@@ -68,7 +75,7 @@ export default function CategoryForm(props) {
         id="new-category-title-input"
         type="text"
         name="categoryTitle"
-        placeholder="Название категории"
+        placeholder={t("category_title_placeholder")}
         onChange={formik.handleChange}
         value={formik.values.categoryTitle}
       />
@@ -84,7 +91,7 @@ export default function CategoryForm(props) {
             formik.handleSubmit();
           }}
         >
-          {editType ? "Изменить" : "Добавить"}
+          {editType ? t("form_edit") : t("form_add")}
         </button>
         <button
           className="form-btn form-cancel-btn"
@@ -93,7 +100,7 @@ export default function CategoryForm(props) {
             editType ? props.changeEditState() : props.changeAddCategoryState();
           }}
         >
-          Отменить
+          {t("form_cancel")}
         </button>
         {editType ? (
           <button
@@ -107,7 +114,7 @@ export default function CategoryForm(props) {
               }, 200);
             }}
           >
-            Удалить
+            {t("form_delete")}
           </button>
         ) : (
           ""

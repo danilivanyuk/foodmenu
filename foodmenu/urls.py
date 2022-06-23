@@ -25,14 +25,16 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenVerifyView,
 )
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 
 import main.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(_('admin/'), admin.site.urls),
     path('api/', include('api.urls')),
-    path('', include('main.urls')),
-    path('profile/', include(('frontend.urls', 'frontend'), namespace='frontend')),
+    # path('', include('main.urls')),
+    # path('profile/', include(('frontend.urls', 'frontend'), namespace='frontend')),
     path('qr_code/', include('qr_code.urls', namespace="qr_code")),
 
     path('auth/', include('dj_rest_auth.urls')),
@@ -53,5 +55,11 @@ urlpatterns = [
     path('registration/', include('dj_rest_auth.registration.urls')),
     path('account/', include('allauth.urls')),
 ]
+
+
+urlpatterns += i18n_patterns(
+    path('', include('main.urls')),
+    path('profile/', include(('frontend.urls', 'frontend'), namespace='frontend')),
+)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

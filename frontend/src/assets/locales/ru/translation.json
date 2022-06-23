@@ -1,0 +1,88 @@
+{
+    "app_title": "FoodMenu",
+
+    "_LAYOUT":"",
+    "profile":"Профиль",
+    "menu":"Меню",
+    "sign_out":"Выйти",
+    "back_to_homepage":"Вернуться на сайт",
+    "change_language":"Изменить язык",
+
+    "_PROFILE":"",
+    "_SUBSCRIPTION_SECTION":"",
+    "subsctiption_title":"Подписка",
+    "dont_have_subscription": "У вас нет подписки",
+    "subscribe":"Подключить",
+    "you_got_that_subscription": "У вас {{subscription}} подписка",
+    "casual_subscription": "Стандарт",
+    "unsubscribe": "Отключить подписку",
+
+    "_EMAIL_SUBMIT":"",
+    "confirm_email":"Подтвердить почту",
+    "send_confirm_code": "Отправить письмо",
+
+    "_PROFILE_SETTINGS":"",
+    "profile_settings":"Настройка профиля",
+    "change_password": "Изменить пароль",
+    "delete_account_title": "Удаление аккаунта",
+    "disclaimer":"Удаление аккаунта приведет к удалению меню, а также вы потеряете подписку",
+    "delete_account":"Удалить аккаунт",
+
+
+    "_MENU_":"",
+    "loading":"Получение данных, пожалуйста подождите",
+    "amount_restriction":"Не более {{maxAmount}} штук",
+
+
+    "_CATEGORIES":"",
+    "add_category": "Добавить категорию",
+
+    
+    "_DISHES":"",
+    "add_dish":"Добавить блюдо",
+
+
+    "_MENUS":"",
+    "create_menu":"Создать меню",
+
+    "_MENU":"",
+    "redirect_to_customer_page":"Перейти на страницу пользователя",
+    "download_qrCode":"Скачать QR-Код",
+
+
+    "_FORMS":"",
+
+    "chars_amount_restriction":"Не более {{maxCharsAmount}} символов",
+    "form_edit":"Изменить",
+    "form_add":"Добавить",
+    "form_cancel":"Отменить",
+    "form_delete":"Удалить",
+    "required_field":"Обязательное поле",
+    "just_numbers":"Только цифры",
+    "title_placeholder":"Название",
+
+    "_CATEGORY_FORM":"",
+    "category_title_placeholder":"Название категории",
+
+    "_PASSWORD_FORM":"",
+    "password_placeholder":"Пароль",
+    "repeat_password_placeholder":"Повторите пароль",
+    "change_password_submit_btn":"Поменять пароль",
+
+    "_DISH_FORM":"",
+    "dish_title_placeholder":"Название блюда",
+    "dish_price_placeholder":"Цена",
+    "dish_description_placeholder":"Описание",
+
+    "_MENU_FORM":"",
+    "field_not_long_enough":"Не меньше {{minCharsAmount}} символов",
+    "file_too_heavy":"Размер файла слишком большой",
+    "unsupported_file_format":"Неподдерживаемый формат файла",
+    "inst_placeholder":"Инстаграм",
+    "default_theme":"Стандартная тема",
+    "black_white_theme":"Черно-белая тема",
+    "address_placeholder":"Адрес",
+    "phone_placeholder":"Телефон"
+
+
+}

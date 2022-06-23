@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import { changePassword } from "../../actions/profile";
 import axios from "axios";
 import "../../../../static/css/reactCSS/forms/Forms.css";
@@ -22,6 +24,7 @@ export default function ChangePasswordForm(props) {
     }
     return cookieValue;
   }
+  const { t } = useTranslation();
   function createError(divToAppend, errorMessage) {
     let errorDiv = document.createElement("div");
     errorDiv.classList.add("error-container");
@@ -85,7 +88,7 @@ export default function ChangePasswordForm(props) {
             <input
               name="password1"
               type="password"
-              placeholder="Пароль"
+              placeholder={t("password_placeholder")}
               onChange={(e) => setPassword1(e.target.value)}
             />
           </div>
@@ -93,7 +96,7 @@ export default function ChangePasswordForm(props) {
             <input
               name="password2"
               type="password"
-              placeholder="Повторите пароль"
+              placeholder={t("repeat_password_placeholder")}
               onChange={(e) => setPassword2(e.target.value)}
             />
           </div>
@@ -107,7 +110,7 @@ export default function ChangePasswordForm(props) {
               changePasswordSubmit();
             }}
           >
-            Поменять пароль
+            {t("change_password_submit_btn")}
           </button>
 
           <button
@@ -116,7 +119,7 @@ export default function ChangePasswordForm(props) {
               props.changePasswordState();
             }}
           >
-            Отменить
+            {t("form_cancel")}
           </button>
         </div>
       </form>

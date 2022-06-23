@@ -133,17 +133,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'ru-RU'
-# LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
+TEMPLATE_CONTEXT_PROCESSOR = ("django.core.context_processors.i18n")
+def gettext_noop(s):
+    return s
 
-# def gettext_noop(s):
-#     return s
+from django.utils.translation import gettext_lazy as _
 
-
-# LANGUAGES = (
-#     ('ru', gettext_noop('Russian')),
-#     ('en', gettext_noop('English')),
-# )
+LANGUAGES = (
+    ('ru', gettext_noop('Russian')),
+    ('en', gettext_noop('English')),
+)
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
 TIME_ZONE = 'Asia/Almaty'
 

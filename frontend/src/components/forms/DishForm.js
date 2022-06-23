@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import { editDish, createDish, deleteDish } from "../../actions/menus";
 import "../../../../static/css/reactCSS/forms/Forms.css";
 
@@ -13,7 +15,7 @@ export default function DishForm(props) {
   const [createType, setCreateType] = useState(
     props.type === "create" ? true : false
   );
-
+  const { t } = useTranslation();
   function submitDishEdit() {
     editDish(props.dish.id, props.dish.category, formik.values);
     let a = setTimeout(() => {
@@ -29,7 +31,6 @@ export default function DishForm(props) {
       props.getFetchedDishes(props.category_id);
     }, 500);
   }
-  const requiredField = "Обязательное поле";
 
   const formik = useFormik({
     initialValues: {
@@ -40,10 +41,13 @@ export default function DishForm(props) {
     },
     validationSchema: Yup.object({
       dishTitle: Yup.string()
-        .max(50, "Не больше 50 символов")
-        .required(requiredField),
-      dishDescription: Yup.string().max(200, "Не больше 200 символов"),
-      dishPrice: Yup.number("Число").required(requiredField),
+        .max(50, t("chars_amount_restriction", { maxCharsAmount: 50 }))
+        .required(t("required_field")),
+      dishDescription: Yup.string().max(
+        200,
+        t("chars_amount_restriction", { maxCharsAmount: 200 })
+      ),
+      dishPrice: Yup.number(t("just_numbers")).required(t("required_field")),
     }),
     onSubmit: (values) => {
       if (values.type === "edit") {
@@ -61,7 +65,7 @@ export default function DishForm(props) {
           <input
             name="dishTitle"
             type="text"
-            placeholder="Название"
+            placeholder={t("dish_title_placeholder")}
             onChange={formik.handleChange}
             value={formik.values.dishTitle}
           />
@@ -71,7 +75,7 @@ export default function DishForm(props) {
           <input
             name="dishPrice"
             type="number"
-            placeholder="Цена"
+            placeholder={t("dish_price_placeholder")}
             onChange={formik.handleChange}
             value={formik.values.dishPrice}
           />
@@ -84,7 +88,7 @@ export default function DishForm(props) {
             name="dishDescription"
             className="new-dish-description-input"
             type="text"
-            placeholder="Описание"
+            placeholder={t("dish_description_placeholder")}
             onChange={formik.handleChange}
             value={formik.values.dishDescription}
           />
@@ -103,7 +107,7 @@ export default function DishForm(props) {
               formik.handleSubmit();
             }}
           >
-            {editType ? "Изменить" : "Создать"}
+            {editType ? t("form_edit") : t("form_add")}
           </button>
           <button
             className="form-btn form-cancel-btn"
@@ -112,7 +116,7 @@ export default function DishForm(props) {
               else props.changeCreateState();
             }}
           >
-            Отменить
+            {t("form_cancel")}
           </button>
           {editType ? (
             <button
@@ -126,7 +130,7 @@ export default function DishForm(props) {
                 props.changeEditState();
               }}
             >
-              Удалить
+              {t("form_delete")}
             </button>
           ) : (
             ""

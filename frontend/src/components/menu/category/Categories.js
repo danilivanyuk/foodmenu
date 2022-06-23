@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import { getCategories } from "../../../actions/menus";
 import Category from "./Category";
 import "../../../../../static/css/reactCSS/menu/category/Categories.css";
@@ -13,7 +15,7 @@ export default function Categories({ menu_id }) {
   useEffect(() => {
     getFetchedCategories(menu_id);
   }, []);
-
+  const { t } = useTranslation();
   function getFetchedCategories(menu_id) {
     let fetchedCategories = getCategories(menu_id);
     fetchedCategories.then((data) => {
@@ -30,10 +32,12 @@ export default function Categories({ menu_id }) {
     }
   }
 
+  const maxAmount = 20;
+
   return (
     <section className="menu-section">
       {loading ? (
-        <p>Загрузка...</p>
+        <p>{t("loading")}</p>
       ) : (
         <div>
           {Object.entries(categories).map(([key, category]) => (
@@ -59,11 +63,11 @@ export default function Categories({ menu_id }) {
                   changeAddCategoryState();
                 }}
               >
-                Добавить категорию
+                {t("add_category")}
               </button>
             )
           ) : (
-            <p>Можно добавить, не более 20 категорий</p>
+            <p>{t("amount_restriction", { maxAmount })}</p>
           )}
         </div>
       )}

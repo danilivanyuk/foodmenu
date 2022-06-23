@@ -1,0 +1,91 @@
+{
+    "app_title": "",
+
+    
+    "_LAYOUT":"",
+    "profile":"Profile",
+    "menu":"Menu",
+    "sign_out":"Sign out",
+    "back_to_homepage":"Back to home page",
+    "change_language":"Change language",
+
+    "_PROFILE":"",
+
+
+    "_SUBSCRIPTION_SECTION":"",
+    "subsctiption_title":"Subscription",
+    "dont_have_subscription": "You don't have subscription",
+    "subscribe":"Subscribe",
+    "you_got_that_subscription": "Your subscription: {{subscription}}",
+    "casual_subscription": "Standart",
+    "unsubscribe": "Unsubscribe",
+
+    "_EMAIL_SUBMIT":"",
+    "confirm_email":"Confirm email",
+    "send_confirm_code": "Send confirmation code",
+
+    "_PROFILE_SETTINGS":"",
+    "profile_settings":"Profile settings",
+    "change_password": "Change password",
+    "delete_account_title": "Delete Account",
+    "disclaimer":"blah blah",
+    "delete_account":"Delete account",
+
+
+    "_MENU_":"",
+    "loading":"Loading, please wait",
+    "amount_restriction":"Max amount - {{maxAmount}}",
+
+
+    "_CATEGORIES":"",
+    "add_category": "Add category",
+
+    
+    "_DISHES":"",
+    "add_dish":"Add dish",
+
+
+    "_MENUS":"",
+    "create_menu":"Create menu",
+
+    "_MENU":"",
+    "redirect_to_customer_page":"Redirect to customer page",
+    "download_qrCode":"Download QR-Code",
+
+
+    "_FORMS":"",
+
+    "chars_amount_restriction":"Max chars amount - {{maxCharsAmount}}",
+    "form_edit":"Edit",
+    "form_add":"Add",
+    "form_cancel":"Cancel",
+    "form_delete":"Delete",
+    "required_field":"Required field",
+    "just_numbers":"Only numbers allowed",
+    "title_placeholder":"Title",
+
+    "_CATEGORY_FORM":"",
+    "category_title_placeholder":"Category title",
+
+    "_PASSWORD_FORM":"",
+    "password_placeholder":"Password",
+    "repeat_password_placeholder":"Repeat password",
+    "change_password_submit_btn":"Submit",
+
+    "_DISH_FORM":"",
+    "dish_title_placeholder":"Dish title",
+    "dish_price_placeholder":"Price",
+    "dish_description_placeholder":"Description",
+
+    "_MENU_FORM":"",
+    "field_not_long_enough":"Min chars - {{minCharsAmount}}",
+    "file_too_heavy":"File size is too heavy",
+    "unsupported_file_format":"Unsupported file format",
+    "inst_placeholder":"Instagram",
+    "default_theme":"Default theme",
+    "black_white_theme":"Black-White theme",
+    "address_placeholder":"Address",
+    "phone_placeholder":"Phone"
+
+
+}

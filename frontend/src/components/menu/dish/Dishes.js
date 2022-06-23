@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import { getDishes } from "../../../actions/menus";
 import Dish from "./Dish";
 import DishForm from "../../forms/DishForm";
@@ -8,7 +10,7 @@ export default function Dishes({ category_id }) {
   const [dishes, setDishes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [createState, setCreateState] = useState(false);
-  const maxDishes = 25;
+  const maxAmount = 25;
   function changeCreateState() {
     if (createState) {
       setCreateState(false);
@@ -19,7 +21,7 @@ export default function Dishes({ category_id }) {
   useEffect(() => {
     getFetchedDishes(category_id);
   }, []);
-
+  const { t } = useTranslation();
   function getFetchedDishes(category_id) {
     let fetchedDishes = getDishes(category_id);
     fetchedDishes.then((data) => {
@@ -30,14 +32,14 @@ export default function Dishes({ category_id }) {
   return (
     <section className="category-dishes-section">
       {loading ? (
-        <p>Загрузка...</p>
+        <p>{t("loading")}</p>
       ) : (
         <div className="category-dishes">
           {Object.entries(dishes).map(([key, dish]) => (
             // <Category key={key} category={category} />
             <Dish dish={dish} key={key} getFetchedDishes={getFetchedDishes} />
           ))}
-          {dishes.length < maxDishes ? (
+          {dishes.length < maxAmount ? (
             createState ? (
               <div className="category-dish">
                 <DishForm
@@ -55,13 +57,13 @@ export default function Dishes({ category_id }) {
                     changeCreateState();
                   }}
                 >
-                  Добавить блюдо
+                  {t("add_dish")}
                 </button>
               </div>
             )
           ) : (
             <div className="category-dish">
-              <p>Можно добавить, не более 25 блюд</p>
+              <p>{t("amount_restriction", { maxAmount })}</p>
             </div>
           )}
         </div>
