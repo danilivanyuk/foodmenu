@@ -103,10 +103,8 @@ msgid "Мульти меню"
 msgstr "Multi-menu"
 
 #: .\main\templates\main\landingPage.html:67
-#, fuzzy
-#| msgid "Онлайн меню для вашего заведения"
-msgid "Создайте меню для всех своих заведений "
-msgstr "Online menu for your cafe"
+msgid "Создайте меню для всех своих заведений"
+msgstr "Online menu for all of your cafe"
 
 #: .\main\templates\main\landingPage.html:74
 msgid "Руководство по использованию"
