@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-14 18:39+0600\n"
+"POT-Creation-Date: 2022-08-22 21:37+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,7 +89,7 @@ msgid "Больший охват аудитории"
 msgstr ""
 
 #: .\main\templates\main\landingPage.html:57
-msgid "хз"
+msgid "Меню будет доступно в интернете"
 msgstr ""
 
 #: .\main\templates\main\landingPage.html:61
@@ -148,36 +148,36 @@ msgstr ""
 msgid "Нажмите на “Создать меню”, и заполните предложенные поля"
 msgstr ""
 
-#: .\main\templates\main\landingPage.html:98
+#: .\main\templates\main\landingPage.html:100
 msgid "Подписка"
 msgstr ""
 
-#: .\main\templates\main\landingPage.html:99
+#: .\main\templates\main\landingPage.html:101
 msgid ""
-"Чтобы полноценно использовать сервис FoodMenu необходимо оформить подписку. "
-"Первые 7 дней для ознакомления будут бесплатны"
+"В данный момент вы можете пользоваться всеми функциями сервиса бесплатно."
 msgstr ""
 
-#: .\main\templates\main\landingPage.html:100
+#: .\main\templates\main\landingPage.html:102
 msgid "5000 тг/месяц"
 msgstr ""
 
-#: .\main\templates\main\landingPage.html:101
+#: .\main\templates\main\landingPage.html:103
 msgid "Подписаться"
 msgstr ""
 
-#: .\main\templates\main\login.html:26 .\main\templates\main\register.html:21
+#: .\main\templates\main\login.html:26 .\main\templates\main\login.html:28
+#: .\main\templates\main\register.html:21
 #: .\main\templates\main\resetPassword.html:21
 msgid "Электронная почта"
 msgstr ""
 
-#: .\main\templates\main\login.html:33
+#: .\main\templates\main\login.html:33 .\main\templates\main\login.html:35
 #: .\main\templates\main\passwordResetConfirm.html:32
 #: .\main\templates\main\register.html:28
 msgid "Пароль"
 msgstr ""
 
-#: .\main\templates\main\login.html:42 .\main\templates\main\main.html:39
+#: .\main\templates\main\login.html:42 .\main\templates\main\main.html:41
 #: .\main\templates\main\passwordResetConfirm.html:55
 #: .\main\templates\main\resetPassword.html:37
 msgid "Войти"
@@ -194,27 +194,27 @@ msgstr ""
 msgid "Забыли пароль?"
 msgstr ""
 
-#: .\main\templates\main\main.html:24 .\main\templates\main\main.html:54
+#: .\main\templates\main\main.html:24 .\main\templates\main\main.html:56
 msgid "Преимущества"
 msgstr ""
 
-#: .\main\templates\main\main.html:25 .\main\templates\main\main.html:55
+#: .\main\templates\main\main.html:25 .\main\templates\main\main.html:57
 msgid "Руководство"
 msgstr ""
 
-#: .\main\templates\main\main.html:26 .\main\templates\main\main.html:56
+#: .\main\templates\main\main.html:26 .\main\templates\main\main.html:58
 msgid "Тарифы"
 msgstr ""
 
-#: .\main\templates\main\main.html:37
+#: .\main\templates\main\main.html:39
 msgid "Профиль"
 msgstr ""
 
-#: .\main\templates\main\main.html:57
+#: .\main\templates\main\main.html:59
 msgid "Политика безопасности"
 msgstr ""
 
-#: .\main\templates\main\main.html:58
+#: .\main\templates\main\main.html:60
 msgid "Публичная оферта"
 msgstr ""
 
